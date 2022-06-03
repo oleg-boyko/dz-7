@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dz7</title>
+</head>
+<body>
+<script>
+  let calcSumm = (arg1, arg2) => arg1 + arg2;
+  let calcSubtr = (arg1, arg2) => arg1 - arg2;
+  let calcMultip = (arg1, arg2) => arg1 * arg2;
+  let calcDivid = (arg1, arg2) => arg1 / arg2;
+  //универсальная функция вызывающая стрелочные "подфункции"
+  let calcMain = function(){
+  let arg1 = +prompt('Enter first arument');
+  let arg2 = +prompt('Enter second argument'); 
+  let operation = prompt('Enter type operation'); 
+    if(!Number.isNaN(arg1) && !Number.isNaN(arg2)){
+      if(operation ==='+'){
+      calcSumm(arg1, arg2)
+      alert(calcSumm(arg1, arg2)); 
+      } else if(operation ==='-'){
+      calcSubtr (arg1, arg2);
+      alert(calcSubtr(arg1, arg2));
+      } else if(operation ==='*'){
+      alert(calcMultip(arg1, arg2));
+      } else if(operation ==='/') {
+      alert(calcDivid(arg1, arg2));
+      } else{
+      alert('Incorrect type operation');
+      } // end input operations block
+   } 
+   else{
+   alert('Incorrect input argument');
+   }// end input validation arguments 
+  }//end calcMain funtion declaration
+
+  calcMain(); // та самая команда(даже не строка!!!) из-за которой все стопорилось( Для позорняка достаточно одного слова)
+</script>
+</body>
+</html>
